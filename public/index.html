@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/index.css">
+    <title>Página Inicial</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav-bar">
+                <div class="logo">
+                    <img src="src/assets/logo.png" alt="">
+                    <div class="title">
+                        <h2>wiki<br>brawl stars</h2>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="banner-home">
+        <div class="sun" id="sun_id"></div>
+        <div class="title" id="title_id">
+            <h1>Wiki Brawl <span>Stars</span></h1>
+        </div>
+        <div class="indicator">
+            <span class="arrow"></span>
+            <span class="arrow"></span>
+            <span class="arrow"></span>
+        </div>
+        <img src="src/assets/bg_brawl.png" alt="">
+    </section>
+    <section class="test">
+
+    </section>
+
+</body>
+
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById("title_id").classList.add("fade-in-top");
+
+        const sun = document.getElementById("sun_id");
+        if (sun) {
+            const initialTop = sun.offsetTop;  // Armazena a posição inicial do elemento
+
+            window.addEventListener('scroll', function () {
+                const value = window.scrollY;
+                sun.style.top = initialTop + value * 1.5 + 'px';  // Ajusta a posição do elemento
+            });
+        }
+    });
+</script>

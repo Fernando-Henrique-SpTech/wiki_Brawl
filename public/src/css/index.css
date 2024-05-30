@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@font-face {
+  font-family: "Nougat";
+  src: url("../font/Nougat-ExtraBlack.ttf");
+}
+
+*,
+*::after,
+*::before {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  /* font-size: 62.5%; */
+  scroll-behavior: smooth;
+}
+
+:root {
+  --heading-text: 0 4px 0 #000;
+  --roxo: #922ef3;
+}
+
+.container {
+  width: 1200px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  background-color: #000;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar .logo {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  width: 100%;
+  height: 70px;
+}
+
+.nav-bar .logo img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo h2 {
+  font-family: "Nougat";
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  word-spacing: -0.3rem;
+
+}
+
+h1 {
+  font-family: 'Lilita One';
+  color: white;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+  font-weight: 400;
+  text-shadow: var(--heading-text);
+  -webkit-text-stroke-width: .025em;
+  -webkit-text-stroke-color: black;
+}
+
+.banner-home {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(242, 163, 94, 1) 20%, rgba(217, 136, 89, 1) 40%, rgba(191, 84, 104, 1) 100%);
+}
+
+.banner-home::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #3B0620, transparent);
+  z-index: 10;
+}
+
+.banner-home img {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.banner-home #sun_id {
+  z-index: 1;
+  position: absolute;
+  top: 30%;
+  margin: auto;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: #F8DDA4;
+  opacity: 0.9;
+  box-shadow: 0 0 40px 15px #F8DDA4;
+}
+
+.banner-home .title {
+  z-index: 3;
+  top: 10%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  width: 500px;
+}
+
+.banner-home .title h1 {
+  font-family: 'Nougat';
+  line-height: .8;
+  word-spacing: -1rem;
+}
+
+.banner-home .title span {
+  color: red;
+  text-shadow: 0 12px 0 black;
+  font-family: 'Nougat';
+  font-size: 8rem;
+  text-transform: uppercase;
+  letter-spacing: -.04em;
+  font-weight: 400;
+}
+
+.fade-in-top {
+  -webkit-animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.indicator {
+  position: absolute;
+  z-index: 10;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.indicator .arrow {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: -10px;
+  border-bottom: 4px solid #fff;
+  border-right: 4px solid #fff;
+  transform: rotate(45deg);
+  animation: animate 2s infinite;
+}
+
+.indicator .arrow:nth-child(1) {
+  animation-delay: -0.4s;
+}
+
+.indicator .arrow:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.test {
+  padding: 100px;
+  background-color: #3B0620;
+  width: 100%;
+  height: 40vh;
+}
