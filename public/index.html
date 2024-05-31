@@ -21,18 +21,27 @@
             </nav>
         </div>
     </header>
+
     <section class="banner-home">
         <div class="sun" id="sun_id"></div>
+
         <div class="title" id="title_id">
             <h1>Wiki Brawl <span>Stars</span></h1>
         </div>
+
         <div class="indicator">
             <span class="arrow"></span>
             <span class="arrow"></span>
             <span class="arrow"></span>
         </div>
-        <img src="src/assets/bg_brawl.png" alt="">
+
+        <!-- <img src="src/assets/bg_brawl.png" alt=""> -->
+        <img src="src/assets/chãoEpersonagens.png" id="floor_id" alt="">
+        <img src="src/assets/leftMontanha.png" id="leftMountain_id" alt="">
+        <img src="src/assets/rightMontanha.png" id="rightMountain_id" alt="">
+
     </section>
+
     <section class="test">
 
     </section>
@@ -42,15 +51,24 @@
 </html>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        document.getElementById("title_id").classList.add("fade-in-top");
+        const title = document.getElementById("title_id");
+        if (title) {
+            title.classList.add("fade-in-top"); // Animação do Titulo
+        }
 
         const sun = document.getElementById("sun_id");
+        const leftMountain = document.getElementById("leftMountain_id");
+        const rightMountain = document.getElementById("rightMountain_id");
+
         if (sun) {
-            const initialTop = sun.offsetTop;  // Armazena a posição inicial do elemento
+            const sun_initialTop = sun.offsetTop;  // Armazena a posição inicial do elemento
 
             window.addEventListener('scroll', function () {
                 const value = window.scrollY;
-                sun.style.top = initialTop + value * 1.5 + 'px';  // Ajusta a posição do elemento
+                sun.style.top = sun_initialTop + value * 1.5 + 'px';  // Ajusta a posição do elemento
+
+                leftMountain.style.transform = 'translateX(' + (value * -0.5) + 'px)';
+                rightMountain.style.transform = 'translateX(' + (value * 0.5) + 'px)';
             });
         }
     });

@@ -102,11 +102,35 @@ h1 {
   position: absolute;
   object-fit: cover;
 }
+#sun_id, #leftMontain_id, #rightMontain_id {
+  transition: transform;
+  will-change: transform;
+
+}
+.banner-home #left_Montain_id {
+  left: 0;
+  z-index: 2;
+}
+.banner-home #right_Montain_id {
+  z-index: 2;
+}
+
+.banner-home #floor_id {
+  z-index: 3;
+}
+#sun_id {
+  will-change: top;
+}
+#leftMontain_id, #rightMontain_id {
+  will-change: left, right;
+}
 
 .banner-home #sun_id {
   z-index: 1;
   position: absolute;
   top: 30%;
+  left: 0;
+  right: 0;
   margin: auto;
   width: 240px;
   height: 240px;
@@ -139,7 +163,7 @@ h1 {
   font-family: 'Nougat';
   font-size: 8rem;
   text-transform: uppercase;
-  letter-spacing: -.04em;
+  letter-spacing: -.02em;
   font-weight: 400;
 }
 
