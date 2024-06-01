@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/index.css">
     <title>Página Inicial</title>
+    <script src="https://kit.fontawesome.com/64ceb195cd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -30,46 +31,113 @@
         </div>
 
         <div class="indicator">
-            <span class="arrow"></span>
-            <span class="arrow"></span>
-            <span class="arrow"></span>
+            <h2>Começar</h2>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
         </div>
 
-        <!-- <img src="src/assets/bg_brawl.png" alt=""> -->
         <img src="src/assets/chãoEpersonagens.png" id="floor_id" alt="">
         <img src="src/assets/leftMontanha.png" id="leftMountain_id" alt="">
         <img src="src/assets/rightMontanha.png" id="rightMountain_id" alt="">
 
     </section>
 
-    <section class="test">
-
+    <section class="welcome">
+        <div class="container">
+            <div class="title">
+                <h1>Bem vindo</h1>
+            </div>
+            <div class="text">
+                <p>Bem-vindos(as) ao Brawl Stars Wiki, um projeto autoral sem fins lucrativos que visa detalhar diversos
+                    aspectos do jogo mobile Brawl Stars. Neste site, você encontrará curiosidades, estratégias,
+                    histórias dos personagens e explicações sobre como o jogo funciona, baseadas na minha longa
+                    experiência com ele desde seu lançamento em 2018. Espero que gostem :)
+                </p>
+            </div>
+        </div>
     </section>
 
+    <section class="about-me">
+        <div class="text-content">
+            <div class="title">
+                <h1>Sobre mim</h1>
+            </div>
+            <div class="descprition">
+                <p>
+                    A história se inicia no final de 2017, eu tinha apenas 13 anos e era um rapaz muito esforçado aos
+                    estudos,
+                    estava cursando o sétimo ano do ensino fundamental e naquele tempo as coisas na minha casa eram
+                    muito
+                    difíceis. Não tínhamos muito dinheiro para roupas novas nem para lazeres no final de semana como
+                    pizza,
+                    hamburguer e até mesmo ir ao shopping, mesmo assim éramos muito felizes com o que tínhamos já
+                    conquistado
+                    até ali. Foi quando sugeri ao meu pai que pudesse me dar um celular como presente de aniversário que
+                    já
+                    estava atrasado, ele foi bem relutante a aceitar esse combinado e eu aceitei que nossas condições
+                    não
+                    poderiam arcar com os custos de um celular naquele momento. Foi quando no início de 2018 eu fui
+                    presenteado
+                    com um celular por meu pai, foi uma surpresa e um grande marco na minha vida pois, era meu primeiro
+                    celular,
+                    o “Moto C Plus”.
+                    Naquele tempo eu não entendia muito de hardware e nem mesmo de quais eram os melhores celulares da
+                    época,
+                    mesmo assim aquele aparelho era muito surpreendente para mim, eu ficava encantado com a diversidade
+                    de
+                    funções e recursos que o mesmo tinha consigo. Porém, a ficha logo caiu com alguns meses de uso,
+                    aquele
+                    celular era muito obsoleto mesmo tendo apenas um ano de lançamento. Alguns meses depois, já para a
+                    metade do
+                    ano, alguns colegas caçoavam do meu celular por ser antigo demais e muito lento, era perceptível até
+                    para os
+                    mais leigos, e, por mais que isso fosse um fato, eu não ligava para isso e sempre aproveitei o
+                    máximo que o
+                    aparelho poderia oferecer.
+                </p>
+            </div>
+        </div>
+        <div class="user-content">
+            <div class="user-card">
+                <div class="img-user">
+                    <img src="src/assets/Imagem1.jpg" alt="">
+                </div>
+                <div class="user-title">
+                    <h2>Fernando Henrique</h2>
+                </div>
+                <div class="user-subtitle">
+                    <h2>Aluno SPTECH</h2>
+                </div>
+
+                <div class="wrapper">
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" class="icon facebook">
+                        <div class="tooltip">Facebook</div>
+                        <span><i class="fa-brands fa-facebook-f"></i></span>
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" class="icon linkedin">
+                        <div class="tooltip">Linkedin</div>
+                        <span><i class="fa-brands fa-linkedin-in"></i></span>
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" class="icon instagram">
+                        <div class="tooltip">Instagram</div>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" class="icon github">
+                        <div class="tooltip">Github</div>
+                        <span><i class="fa-brands fa-github"></i></span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="src/js/homepage.js"></script>
 </body>
 
 </html>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const title = document.getElementById("title_id");
-        if (title) {
-            title.classList.add("fade-in-top"); // Animação do Titulo
-        }
-
-        const sun = document.getElementById("sun_id");
-        const leftMountain = document.getElementById("leftMountain_id");
-        const rightMountain = document.getElementById("rightMountain_id");
-
-        if (sun) {
-            const sun_initialTop = sun.offsetTop;  // Armazena a posição inicial do elemento
-
-            window.addEventListener('scroll', function () {
-                const value = window.scrollY;
-                sun.style.top = sun_initialTop + value * 1.5 + 'px';  // Ajusta a posição do elemento
-
-                leftMountain.style.transform = 'translateX(' + (value * -0.5) + 'px)';
-                rightMountain.style.transform = 'translateX(' + (value * 0.5) + 'px)';
-            });
-        }
-    });
-</script>
