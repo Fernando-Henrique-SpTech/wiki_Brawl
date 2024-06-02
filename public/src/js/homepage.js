@@ -1,3 +1,4 @@
+
 // Evento quando a página abrir
 document.addEventListener('DOMContentLoaded', function () {
     const title = document.getElementById("title_id");
@@ -21,3 +22,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+

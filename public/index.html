@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="src/css/index.css">
     <title>Página Inicial</title>
     <script src="https://kit.fontawesome.com/64ceb195cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -177,7 +179,148 @@
         </div>
     </section>
 
+    <section class="carousel">
+        <div class="container swiper">
+
+            <div class="carousel-page swiper-wrapper">
+
+                <div class="slide swiper-slide">
+                    <div class="carousel-content ">
+                        <div class="text-content">
+                            <h1>Jogabilidade</h1>
+                            <p>
+                                Em Brawl Stars, você controla um personagem conhecido como "Brawler" e participa de
+                                batalhas
+                                intensas em diferentes modos de jogo. Cada Brawler possui habilidades únicas, e é
+                                possível
+                                desbloquear novos personagens conforme avança no jogo. As batalhas são rápidas, com
+                                duração
+                                média de três minutos, e podem ser jogadas em equipes de três jogadores, duplas ou até
+                                no
+                                modo
+                                solo.
+                            </p>
+                        </div>
+                        <div class="image-content">
+                            <img src="src/assets/poco-img1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide swiper-slide">
+                    <div class="carousel-content ">
+                        <div class="text-content">
+                            <h1>Modos de Jogo</h1>
+                            <p>
+                                Brawl Stars oferece uma variedade de modos de jogo, cada um com objetivos distintos:
+                            </p>
+                            <ul>
+                                <li><span>Pique Gemas:</span> Equipes competem para coletar e segurar 10 gemas até o
+                                    final do
+                                    jogo.
+                                </li>
+
+                                <li><span>Combate:</span> Um modo estilo battle royale onde o último jogador ou equipe
+                                    sobrevivente
+                                    vence.
+                                </li>
+
+                                <li><span>Roubo:</span> Proteja seu cofre e tente abrir o cofre do time adversário.
+                                </li>
+
+                                <li><span>Futebol (Brawl Ball):</span> Similar ao futebol, onde o objetivo é marcar gols
+                                    na baliza
+                                    adversária.
+                                </li>
+
+                                <li>
+                                    <span>Caçadores de Estrelas:</span> Ganhe estrelas derrotando adversários e evite
+                                    ser
+                                    derrotado para não perder suas estrelas.
+                                </li>
+
+                                <li>
+                                    <span>Evento Especial: </span>Modos de tempo limitado (como Basquete, modo Chefão e Caos
+                                    Cibenético) que oferecem desafios
+                                    únicos e recompensas exclusivas.
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="image-content">
+                            <img src="src/assets/sheely-img1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide swiper-slide">
+                    <div class="carousel-content ">
+                        <div class="text-content">
+                            <h1>Personagens e Progressão</h1>
+                            <p>
+                                Com uma grande variedade de Brawlers para escolher, cada um com suas próprias
+                                habilidades e super ataques, a estratégia é fundamental. Os jogadores podem melhorar
+                                seus personagens, desbloquear novas skins e participar de eventos sazonais e desafios
+                                especiais. </p>
+                        </div>
+                        <div class="image-content">
+                            <img src="src/assets/jessie-img2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide swiper-slide">
+                    <div class="carousel-content ">
+                        <div class="text-content">
+                            <h1>Comunidade e Competitividade</h1>
+                            <p>
+                                Brawl Stars tem uma comunidade ativa e engajada, com jogadores participando de clubes,
+                                assistindo a transmissões ao vivo e competindo em torneios e campeonatos eSports. A
+                                competição é feroz, mas a diversão e a camaradagem são sempre destacadas.</p>
+                        </div>
+                        <div class="image-content">
+                            <img src="src/assets/brawlers-img2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="src/js/homepage.js"></script>
 </body>
 
 </html>
+<script>
+    const swiper = new Swiper('.swiper', {
+        spaceBetween: 30,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true,
+        },
+        loop: true,
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+    });
+</script>

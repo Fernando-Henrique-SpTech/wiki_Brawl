@@ -14,10 +14,12 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 :root {
   --heading-text: 0 4px 0 #000;
   --roxo: #922ef3;
@@ -284,32 +286,38 @@ h1 {
   justify-content: center;
   filter: drop-shadow(0 3px 8px rgba(0, 0, 0, .75));
 }
+
 .welcome .container {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .welcome .title {
   display: flex;
   justify-content: center;
   margin-bottom: 18px;
 }
+
 .welcome .text {
   width: 60%;
   line-height: 1.8;
 }
+
 .welcome .text p {
   font-family: 'Roboto', sans-serif;
   color: white;
   font-size: 18px;
   text-align: center;
 }
+
 .welcome .wrapper {
   column-gap: 16px;
   margin: 40px 0;
   display: flex;
   justify-content: space-between;
 }
+
 .welcome .wrapper .card {
   display: flex;
   align-items: center;
@@ -320,21 +328,24 @@ h1 {
   background-color: #fafafa;
   font-family: "roboto";
 }
+
 .welcome .wrapper .card .fa-icon {
   font-size: 56px;
   color: var(--vinho)
 }
+
 .welcome .wrapper .card h2 {
   font-size: 32px;
   text-transform: uppercase;
   margin: 16px 0 8px 0;
 }
+
 .welcome .wrapper .card p {
   text-align: center;
   font-size: 14px;
   color: #808080;
 }
- 
+
 /* SESSAO SOBRE MIM */
 .about-me {
   width: 100%;
@@ -352,9 +363,11 @@ h1 {
   align-items: center;
   flex-direction: column;
 }
+
 .about-me .text-content .title {
   margin: 24px 0;
 }
+
 .about-me .text-content .descprition {
   width: 100%;
   padding: 0 16%;
@@ -552,26 +565,30 @@ h1 {
   background-color: #de463b;
   color: #ffffff;
 }
+
 .about-brawl {
   padding: 0 8%;
   position: relative;
   width: 100%;
   height: 80vh;
+  max-height: 100vh;
   display: flex;
   justify-content: space-between;
-  /* background-color: #000; */
   align-items: center;
 }
+
 .about-brawl .image-content {
   height: 90%;
   /* left: 10%; */
   /* background-color: #0e76a8; */
 }
+
 .about-brawl .image-content img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .about-brawl .text-content {
   position: relative;
   width: 65%;
@@ -579,6 +596,7 @@ h1 {
   /* background-color: #0e76a8; */
   padding: 5%;
 }
+
 .about-brawl .text-content .title {
   font-family: "lilita one";
   color: #000;
@@ -586,8 +604,95 @@ h1 {
   text-transform: uppercase;
   margin-bottom: 32px;
 }
+
 .about-brawl .text-content .description {
   font-family: "Roboto";
   font-size: 16px;
   line-height: 2;
+}
+
+/* SESSAO CARROSSEL */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #2e36f3;
+  background-image: url(../assets/brawlpattern.png);
+  background-repeat: repeat;
+  background-size: auto; 
+}
+
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(83.08% 50% at 50% 50%, rgba(107, 113, 232, .45) 0, rgba(13, 19, 155, .6) 100%)
+}
+
+.carousel .container {
+  position: relative;
+}
+
+.carousel-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .carousel-content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  align-items: center;
+}
+
+.carousel-content .text-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.carousel-content .text-content h1 {
+  margin-bottom: 24px;
+}
+
+.carousel-content .text-content p {
+  font-family: "Roboto";
+  font-size: 24px;
+  line-height: 1.65;
+}
+ .text-content ul {
+  font-family: "Roboto";
+  font-size: 24px;
+  list-style: disc !important;
+}
+ .text-content ul li {
+  margin-left: 40px;
+  margin-bottom: 15px;
+}
+.text-content ul li span {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.carousel-content .image-content {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-content .image-content img {
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
