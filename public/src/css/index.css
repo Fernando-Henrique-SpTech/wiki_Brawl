@@ -621,7 +621,7 @@ h1 {
   background-color: #2e36f3;
   background-image: url(../assets/brawlpattern.png);
   background-repeat: repeat;
-  background-size: auto; 
+  background-size: auto;
 }
 
 .carousel::after {
@@ -671,15 +671,18 @@ h1 {
   font-size: 24px;
   line-height: 1.65;
 }
- .text-content ul {
+
+.text-content ul {
   font-family: "Roboto";
   font-size: 24px;
   list-style: disc !important;
 }
- .text-content ul li {
+
+.text-content ul li {
   margin-left: 40px;
   margin-bottom: 15px;
 }
+
 .text-content ul li span {
   font-weight: 900;
   text-transform: uppercase;
@@ -695,4 +698,26 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.carousel :is(.swiper-button-next, .swiper-button-prev) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.5);
+  top: 10%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: background-color .3s;
+}
+
+.carousel :is(.swiper-button-next, .swiper-button-prev)::after {
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--branco-amarelado);
+}
+
+.carousel :is(.swiper-button-next, .swiper-button-prev):hover {
+  background-color: var(--roxo);
 }
