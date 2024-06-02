@@ -622,6 +622,7 @@ h1 {
   background-image: url(../assets/brawlpattern.png);
   background-repeat: repeat;
   background-size: auto;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, .75));
 }
 
 .carousel::after {
@@ -721,3 +722,87 @@ h1 {
 .carousel :is(.swiper-button-next, .swiper-button-prev):hover {
   background-color: var(--roxo);
 }
+
+/* SESSAO SOBRE A ONU */
+.about-onu {
+  display: flex;
+  justify-content: center;
+  /* height: 100vh; */
+  width: 100%;
+  background-color: var(--vinho);
+  padding-bottom: 100px;
+}
+.about-onu .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+}
+.about-onu .title {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0;
+}
+.about-onu .description {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.about-onu .description p {
+  width: 50%;
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 1.8;
+  color: #fff;
+}
+.about-onu .text-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  
+}
+.about-onu .text-content .icon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+.about-onu .text-content .icon::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #DE712C;
+  bottom: 8px;
+  left: 8px;
+  border-radius: 15px;
+  z-index: -1;
+}
+.text-content .icon i {
+  font-size: 56px;
+  color: #DE712C;
+}
+.about-onu .text-content h2 {
+  font-size: 32px;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  color: #DE712C;
+  margin: 24px 0 8px 0;
+}
+.about-onu .text-content p{
+  font-size: 18px;
+  font-family: "Roboto";
+  line-height: 1.8;
+  color: #fff;
+  text-align: justify;
+}
+
