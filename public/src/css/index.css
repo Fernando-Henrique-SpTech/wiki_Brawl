@@ -62,13 +62,12 @@ header .container {
   object-fit: cover;
 }
 
-.logo h2 {
+.nav-bar .logo h2 {
   font-family: "Nougat";
   font-size: 18px;
   text-transform: uppercase;
   color: white;
   word-spacing: -0.3rem;
-
 }
 
 h1 {
@@ -238,6 +237,7 @@ h1 {
   text-transform: uppercase;
   color: #fff;
   font-weight: 800;
+  font-family: "roboto";
   font-size: 16px;
   animation: animate 2s infinite;
   animation-delay: -0.4s;
@@ -281,7 +281,6 @@ h1 {
   background-color: #3B0620;
   padding-top: 100px;
   width: 100%;
-  /* height: 50vh; */
   display: flex;
   justify-content: center;
   filter: drop-shadow(0 3px 8px rgba(0, 0, 0, .75));
@@ -732,16 +731,19 @@ h1 {
   background-color: var(--vinho);
   padding-bottom: 100px;
 }
+
 .about-onu .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 50px;
 }
+
 .about-onu .title {
   display: flex;
   justify-content: center;
   margin: 32px 0;
 }
+
 .about-onu .description {
   width: 100%;
   text-align: center;
@@ -749,6 +751,7 @@ h1 {
   justify-content: center;
   margin-bottom: 24px;
 }
+
 .about-onu .description p {
   width: 50%;
   font-family: "Roboto";
@@ -756,6 +759,7 @@ h1 {
   line-height: 1.8;
   color: #fff;
 }
+
 .about-onu .text-content {
   width: 100%;
   height: 100%;
@@ -764,8 +768,9 @@ h1 {
   flex-direction: column;
   position: relative;
   z-index: 1;
-  
+
 }
+
 .about-onu .text-content .icon {
   position: relative;
   width: 100px;
@@ -776,6 +781,7 @@ h1 {
   align-items: center;
   border-radius: 15px;
 }
+
 .about-onu .text-content .icon::before {
   content: "";
   position: absolute;
@@ -787,10 +793,12 @@ h1 {
   border-radius: 15px;
   z-index: -1;
 }
+
 .text-content .icon i {
   font-size: 56px;
   color: #DE712C;
 }
+
 .about-onu .text-content h2 {
   font-size: 32px;
   font-family: "Roboto";
@@ -798,7 +806,8 @@ h1 {
   color: #DE712C;
   margin: 24px 0 8px 0;
 }
-.about-onu .text-content p{
+
+.about-onu .text-content p {
   font-size: 18px;
   font-family: "Roboto";
   line-height: 1.8;
@@ -806,3 +815,111 @@ h1 {
   text-align: justify;
 }
 
+footer {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 200px 0;
+  width: 100%;
+  color: #FFF;
+  height: auto; 
+  font-family:"Lilita One" ;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .container .media-content h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.media-content .icons {
+  font-size: 32px;
+  gap: 16px;
+  display: flex;
+  transition: transform 0.3s, color .3s;
+  cursor: pointer;
+}
+.media-content .icons i:hover {
+  color: var(--vinho);
+  transform: scale(1.3);
+}
+
+footer .footer-social-media {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+}
+
+.footer-social-media .store-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  gap: 30px;
+  
+}
+
+footer .store-img {
+  height: 60px; 
+}
+
+footer .store-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+footer .store-img img:hover {
+  transform: scale(1.05);
+}
+footer .footer-links ul {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+
+}
+footer .footer-links ul li {
+  padding: 15px;
+  transition: background-color .3s;
+}
+footer .footer-links ul li:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+footer .logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 8px;
+  width: 100%;
+  height: 70px;
+}
+
+footer .logo img {
+  height: 100%;
+  object-fit: cover;
+}
+
+footer .logo h2 {
+  font-family: "Nougat";
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  word-spacing: -0.3rem;
+}
+footer .footer-copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "roboto";
+  color: #999;
+}
