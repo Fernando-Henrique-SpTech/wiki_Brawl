@@ -145,6 +145,7 @@ h1 {
     height: 100%;
     background-color: #EBEDEE;
     padding: 32px 16px;
+    position: relative;
 }
 .dash-area .kpi-section {
     width: 100%;
@@ -171,6 +172,8 @@ h1 {
     display: flex;
     align-items: center;
     gap: 16px;
+    justify-content: space-between;
+    width: 100%;
 }
 .kpi-section .kpi-card i {
     font-size: 24px;
@@ -184,13 +187,29 @@ h1 {
     font-weight: 900;
     font-size: 38px;
 }
-.kpi-card .info {
-    position:absolute;
-    top: 5px;
-    right: 8px;
-}
 .kpi-card .info i {
     font-size: 14px;
     color: #bdbdbd;
     cursor: pointer;
+}
+.kpi-section .kpi-card .kpi-value {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.dash-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progressbar-text {
+    transform: translate(50%, 50%);
+    right: 50%;
+}
+#progress-container {
+    width: 80%;
 }

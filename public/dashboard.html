@@ -7,6 +7,7 @@
     <title>Meu perfil</title>
     <link rel="stylesheet" href="src/css/dashboard.css">
     <script src="https://kit.fontawesome.com/80ec270284.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js/dist/progressbar.min.js"></script>
 </head>
 
 <body>
@@ -42,29 +43,43 @@
                     <div class="kpi-card">
                         <div class="kpi-head">
                             <i class="fa-solid fa-eye"></i>
-                            <h2>vizualições </h2>
+                            <h2>vizualizações </h2>
+                            <div class="info"><i class="fa-solid fa-circle-info"></i></div>
                         </div>
-                        <h3>10</h3>
-                        <div class="info"><i class="fa-solid fa-circle-info"></i></div>
+                        <div class="kpi-value">
+                            <h3>10</h3>
+                        </div>
                     </div>
+
                     <div class="kpi-card">
                         <div class="kpi-head">
                             <i class="fa-solid fa-heart"></i>
                             <h2>gostei</h2>
+                            <div class="info"><i class="fa-solid fa-circle-info"></i></div>
                         </div>
-                        <h3>10</h3>
+                        <div class="kpi-value">
+                            <h3>10</h3>
+                        </div>
                     </div>
+
                     <div class="kpi-card">
                         <div class="kpi-head">
                             <i class="fa-solid fa-skull"></i>
                             <h2> Brawlers </h2>
+                            <div class="info"><i class="fa-solid fa-circle-info"></i></div>
                         </div>
-                        <h3>10</h3>
+                        <div class="kpi-value">
+                            <h3>10</h3>
+                        </div>
                     </div>
+                </div>
+                <div class="dash-section">
+                    <div id="progress-container"></div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="src/js/dashboard.js"></script>
 </body>
 
 </html>
