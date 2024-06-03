@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: "Nougat";
+    src: url("../font/Nougat-ExtraBlack.ttf");
+}
+
+*,
+*::after,
+*::before {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --heading-text: 0 4px 0 #000;
+    --roxo: #922ef3;
+    --cinza-escuro: #323232;
+    --ciza-claro: #808080;
+    --branco-amarelado: #fafafa;
+    --vinho: #3B0620;
+}
+
+.container {
+    width: 1200px;
+}
+
+h1 {
+    font-family: 'Lilita One';
+    color: white;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: -.02em;
+    font-weight: 400;
+    text-shadow: var(--heading-text);
+    -webkit-text-stroke-width: .025em;
+    -webkit-text-stroke-color: black;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(#00aaff, #1927c7);
+}
+
+.main .dash-box {
+    border-radius: 20px;
+    width: 90%;
+    height: 90%;
+    background-color: #3B0620;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    overflow: hidden;
+}
+
+.main .dash-box .menu {
+    width: 100%;
+    height: auto;
+    background-color: var(--branco-amarelado);
+}
+
+.main .dash-box .menu .head-menu {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: var(--cinza-escuro);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-family: "lilita one";
+    text-transform: uppercase;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.dash-box .menu .head-menu .logo-icon {
+    height: 32px;
+}
+
+.dash-box .menu .head-menu .logo-icon img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+.dash-box .menu .menu-options .submenu-option {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #bdbdbd;
+    padding: 0 16px 8px 32px;
+    text-decoration: none;
+    color: #B8B8B8;
+    margin: 12px 0;
+    font-family: "roboto";
+}
+
+.submenu-option i {
+    font-size: 16px;
+    color: #fff;
+    padding: 8px;
+    background-color: var(--cinza-escuro);
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.submenu-option p {
+    width: 100%;
+}
+
+.submenu-option span {
+    font-size: 22px;
+    transition: transform 0.3s;
+}
+
+
+.submenu-option:hover i {
+    color: #000;
+}
+
+.submenu-option:hover span {
+    color: #000;
+    font-weight: 900;
+    transform: translateX(8px);
+}
+
+.submenu-option:hover p {
+    color: #000;
+    font-weight: 900;
+}
+.main .dash-box .dash-area {
+    width: 100%;
+    height: 100%;
+    background-color: #EBEDEE;
+    padding: 32px 16px;
+}
+.dash-area .kpi-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.dash-area .kpi-section .kpi-card {
+    width: 200px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-family: "roboto";
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 12px;
+    position: relative;
+}
+.kpi-section .kpi-card .kpi-head {
+    color: var(--ciza-claro);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.kpi-section .kpi-card i {
+    font-size: 24px;
+}
+.kpi-section .kpi-card h2 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 900;
+}
+.kpi-section .kpi-card h3 {
+    font-weight: 900;
+    font-size: 38px;
+}
+.kpi-card .info {
+    position:absolute;
+    top: 5px;
+    right: 8px;
+}
+.kpi-card .info i {
+    font-size: 14px;
+    color: #bdbdbd;
+    cursor: pointer;
+}
