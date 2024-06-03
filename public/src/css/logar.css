@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@font-face {
+  font-family: "Nougat";
+  src: url("../font/Nougat-ExtraBlack.ttf");
+}
+
+*,
+*::after,
+*::before {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --heading-text: 0 4px 0 #000;
+  --roxo: #922ef3;
+  --cinza-escuro: #323232;
+  --ciza-claro: #808080;
+  --branco-amarelado: #fafafa;
+  --vinho: #3B0620;
+}
+
+.container {
+  width: 1200px;
+}
+
+h1 {
+  font-family: 'Lilita One';
+  color: white;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+  font-weight: 400;
+  text-shadow: var(--heading-text);
+  -webkit-text-stroke-width: .025em;
+  -webkit-text-stroke-color: black;
+}
+/* SESSAO PRINCIPAL */
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(#00aaff, #1927c7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.main::before {
+    content: "";
+    position: absolute;
+    top: 50%;left: 50%;
+    width: 50%;
+    height: 50%;
+    background: #00ffdd;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 1;
+}
+.main .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../assets/bones.svg);
+    background-repeat: repeat;
+    background-size: 18%;
+    z-index: 1;
+}
+.main .form-box {
+    border-radius: 12px;
+    width: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px;
+    background-color: var(--branco-amarelado);
+    position: relative;
+    z-index: 2;
+}
+.main .form-box .title h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: "lilita one";
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.main .form-box .form-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.main .form-box .form-content .form-description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .form-box .form-content .form-description h2 {
+    font-size: 24px;
+    font-family: "roboto";
+    margin-bottom: 14px;
+}
+.main .form-box .form-content .form-description p {
+    text-align: center;
+    font-size: 16px;
+    font-family: "roboto";
+    margin-bottom: 14px;
+    color: #666666;
+}
+
+.main .form-box .form-content .form-input {
+    width: 100%;
+}
+.form-content .form-input input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-family: "roboto";
+    color: rgb(102, 102, 102/1);
+    border-radius: 10px;
+    margin-bottom: 14px;
+    border: none;
+    box-shadow: inset 0rem 0.0625rem 0.1875rem rgba(0, 0, 0, 0.25);
+}
+.main .form-box .form-content .form-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main .form-box .form-content .form-btn button {
+    padding: 12px;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    font-size: 18px;
+    font-family: "Roboto";
+    font-weight: 900;
+    opacity: 0.6;
+    border: solid 2px var(--cinza-escuro);
+}
+.main .form-box .form-content .form-btn button:hover {
+    opacity: 1;
+}
+.form-btn  #logar_conta {
+    color: #FFF;
+    border: none;
+    background-color: #00aaff;
+}
+.form-btn a {
+    text-align: center;
+    color: #323232;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 12px;
+}
