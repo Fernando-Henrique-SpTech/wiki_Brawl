@@ -39,6 +39,10 @@
                 </div>
             </div>
             <div class="dash-area">
+                <div class="user-section">
+                    <h2>Usuário: <span id="userName"></span></h2>
+                    <h2>Email: <span id="userEmail"></span></h2>
+                </div>
                 <div class="kpi-section">
                     <div class="kpi-card">
                         <div class="kpi-head">
@@ -73,9 +77,18 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="dash-section">
+                    <div class="logo">
+                        <img src="src/assets/mini-logo.png" alt="">
+                    </div>
+                    <div class="title">
+                        <h2>Meu Progresso</h2>
+                        <div class="info"><i class="fa-solid fa-circle-info"></i></div>
+                    </div>
                     <div id="progress-container"></div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -84,5 +97,6 @@
 
 </html>
 <script>
-     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    userName.innerHTML = sessionStorage.NOME_USUARIO;
+    userEmail.innerHTML = sessionStorage.EMAIL_USUARIO;
 </script>

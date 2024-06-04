@@ -147,6 +147,23 @@ h1 {
     padding: 32px 16px;
     position: relative;
 }
+.dash-area .user-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: "Roboto";
+    margin-bottom: 16px;
+}
+.dash-area .user-section h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.dash-area .user-section h2 span {
+    font-weight: 800;
+    color: var(--cinza-escuro);
+}
 .dash-area .kpi-section {
     width: 100%;
     display: flex;
@@ -201,11 +218,38 @@ h1 {
 .dash-section {
     position: relative;
     width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px ;
+}
+.dash-section .title {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 16px;
 }
+.dash-section .title .info {
+    font-size: 14px;
+    color: #bdbdbd;
+    cursor: pointer;
+}
+.dash-section h2 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "roboto";
+    margin-bottom: 8px;
+}
+.dash-section .logo {
+    height: 180px;
+    margin-bottom: 16px;
+}
+.dash-section .logo img {
+    width: 100%;
+    height: 100%;
+}
+
 .progressbar-text {
     transform: translate(50%, 50%);
     right: 50%;

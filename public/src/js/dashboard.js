@@ -8,11 +8,11 @@ const bar = new ProgressBar.Line('#progress-container', {
     svgStyle: { width: '100%', height: '100%' },
     text: {
         style: {
-            color: '#999',
+            fontFamily: 'Roboto',
+            fontWeight: 900,
+            color: '#000',
             position: 'absolute',
-            padding: 0,
-            margin: 0,
-            transform: null
+            fontSize: '20px'
         },
         autoStyleContainer: false
     },
