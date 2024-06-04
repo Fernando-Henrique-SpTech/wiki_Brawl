@@ -1,9 +1,18 @@
+
+// Evento no Botão que cancela o preenchimento do formulário
+const cancel = document.getElementById("cancel_btn");
+cancel.addEventListener("click", cancelarFormulario)
+
+function cancelarFormulario() {
+    window.open("index.html", "_self")
+}
+
 const caracterMaiusculo = "QWERTYUIOPASDFGHJKLZXCVBNM";
 const caracterMinusculo = "qwertyuiopasdfghjklzxcvbnm";
 const caracterNum = "1234567890";
 const caracterEspecial = "!#$%&*?@_";
 
-function cadastrar() {
+function validarCadastro() {
     const nome = input_nome.value;
     const email = input_email.value;
     const senha = input_senha.value;
@@ -68,17 +77,49 @@ function cadastrar() {
 
     if (mensagensErro.length > 0) {
         alert(mensagensErro.join("\n"));
+
     } else {
-        alert("Cadastro realizado com sucesso!");
-        // função cadastrar
-        window.open("logar.html", "_self")
+        alert("credencias criadas aceitas")
+        
+        var nomeVar = nome;
+        var emailVar = email;
+        var senhaVar = senha;
+        var confirmacaoSenhaVar = confirmarSenha;
+        console.log(nomeVar, emailVar, senhaVar, confirmacaoSenhaVar)
+    
+            // Enviando o valor da nova input
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    nomeServer: nomeVar,
+                    emailServer: emailVar,
+                    senhaServer: senhaVar
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("resposta: ", resposta);
+    
+                    if (resposta.ok) {
+    
+                        alert("Cadastro realizado com sucesso!");
+    
+                        setTimeout(() => {
+                            window.location = "logar.html";
+                        }, "2000");
+    
+                    } else {
+                        throw "Houve um erro ao tentar realizar o cadastro!";
+                    }
+                })
+                .catch(function (resposta) {
+                    console.log(`#ERRO: ${resposta}`);
+                });
+    
+            return false;
+        }
     }
-}
-
-// Botão que cancela o preenchimento do formulário
-const cancel = document.getElementById("cancel_btn");
-cancel.addEventListener("click", cancelarFormulario)
-
-function cancelarFormulario() {
-    window.open("index.html", "_self")
-}
