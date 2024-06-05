@@ -23,9 +23,57 @@
                 </div>
             </nav>
         </div>
+        <div id="sidebar">
+            <div id="toggle-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <span>Homepage ⏷</span>
+                        <div class="dropdown-links">
+                            <ul>
+                                <li><a href="#welcome">Bem Vindo</a></li>
+                                <li><a href="#aboutMe">Sobre Mim</a></li>
+                                <li><a href="#aboutBrawl">Conheça Brawl Stars</a></li>
+                                <li><a href="#aboutONU">Onu</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <span>Cadastrar | Logar ⏷</span>
+                        <div class="dropdown-links">
+                            <ul>
+                                <li><a href="cadastrar.html">Fazer Cadastro</a></li>
+                                <li><a href="logar.html">Fazer Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown">
+                        <span>Personagens ⏷</span>
+                        <div class="dropdown-links">
+                            <ul>
+                                <li><a href="">Shelly</a></li>
+                                <li><a href="">Colt</a></li>
+                                <li><a href="">Poco</a></li>
+                                <li><a href="">Spike</a></li>
+                                <li><a href="">Corvo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </header>
 
-    <section class="banner-home">
+    <section class="banner-home" id="bannerHome">
         <div class="sun" id="sun_id"></div>
 
         <div class="title" id="title_id">
@@ -45,7 +93,7 @@
 
     </section>
 
-    <section class="welcome">
+    <section class="welcome" id="welcome">
         <div class="container">
             <div class="title">
                 <h1>Bem vindo</h1>
@@ -83,7 +131,7 @@
         </div>
     </section>
 
-    <section class="about-me">
+    <section class="about-me" id="aboutMe">
         <div class="text-content">
             <div class="title">
                 <h1>Sobre mim</h1>
@@ -152,7 +200,7 @@
         </div>
     </section>
 
-    <section class="about-brawl">
+    <section class="about-brawl" id="aboutBrawl">
         <div class="image-content">
             <img src="src/assets/colt-brawl.png" alt="">
         </div>
@@ -291,7 +339,7 @@
         </div>
     </section>
 
-    <section class="about-onu">
+    <section class="about-onu" id="aboutONU">
         <div class="container">
             <div class="title">
                 <h1>ONU</h1>
@@ -396,3 +444,11 @@
 </body>
 
 </html>
+<script>
+    const sideMenu = document.getElementById("sidebar");
+    const toggle_btn = document.getElementById("toggle-btn");
+
+    toggle_btn.addEventListener("click", function () {
+        sideMenu.classList.toggle("active");
+    });
+</script>
