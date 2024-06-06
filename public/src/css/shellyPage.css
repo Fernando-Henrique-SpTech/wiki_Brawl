@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: "Nougat";
+    src: url("../font/Nougat-ExtraBlack.ttf");
+}
+
+*,
+*::after,
+*::before {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --heading-text: 0 4px 0 #000;
+    --roxo: #922ef3;
+    --cinza-escuro: #323232;
+    --ciza-claro: #808080;
+    --branco-amarelado: #fafafa;
+    --vinho: #3B0620;
+}
+
+.container {
+    width: 1200px;
+}
+
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* NAV BAR */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav-bar .logo a  {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    width: 100%;
+    height: 70px;
+}
+
+.nav-bar .logo img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-bar .logo h2 {
+    font-family: "Nougat";
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+    word-spacing: -0.3rem;
+}
+
+h1 {
+    font-family: 'Lilita One';
+    color: white;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: -.02em;
+    font-weight: 400;
+    text-shadow: var(--heading-text);
+    -webkit-text-stroke-width: .025em;
+    -webkit-text-stroke-color: black;
+}
+
+header #sidebar {
+    font-family: 'roboto';
+    position: absolute;
+    width: 300px;
+    height: 100vh;
+    background-color: black;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    z-index: 90;
+    transition: transform .3s;
+}
+
+header #sidebar.active {
+    transform: translateX(0);
+}
+
+header #sidebar #toggle-btn {
+    position: absolute;
+    top: 4%;
+    right: calc(100% + 30px);
+    cursor: pointer;
+    transition: transform 2.s;
+}
+
+header #sidebar #toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+header #sidebar #toggle-btn span {
+    width: 40px;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+    margin-top: 4px;
+}
+
+header #sidebar ul li {
+    list-style: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+header #sidebar ul li a {
+    padding: 20px 24px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+header #sidebar ul li a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+header #sidebar .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+header #sidebar .dropdown span {
+    padding: 20px 24px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+header #sidebar .dropdown span:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#sidebar .dropdown .dropdown-links {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    background-color: #000;
+    min-width: 100%;
+
+}
+
+#sidebar .dropdown:hover .dropdown-links {
+    display: block;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.main .container {}
+
+.main .container .brawlStats {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.brawlStats .brawl-img {
+    width: 100%;
+    height: 100%;
+    /* background-color: #3B0620; */
+}
+
+.brawlStats .brawl-img .brawl-face {
+    width: 400px;
+    height: 400px;
+}
+
+.brawlStats .brawl-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brawlStats .brawl-description {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brawlStats .brawl-description .text {
+    padding: 20px;
+    background-color: #020C6B;
+    border: solid #000 4px;
+    font-family: "roboto";
+}
+
+.brawl-description .text h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.brawl-description .text p {
+    color: #9CE1F4;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.main .container .brawlHabilities {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.brawlHabilities table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.brawlHabilities th,
+td {
+    padding: 12px 15px;
+}
+
+.brawlHabilities th {
+    background-color: #343c50;
+    border: 3px rgba(8, 0, 8, 0.80);
+    box-shadow: inset 0 -6px 0 #242c3c, inset 0 5px 0 #504c68, 0 4px 0 rgba(0, 0, 0, 0.15);
+    color: white;
+    font-family: 'Lilita One';
+    font-weight: normal;
+    text-shadow: 1px 0 1px black, -1px 0 1px black, 0 1px 1px black, 0 -1px 1px black, 0 2px 1px black !important;
+}
+
+.brawlHabilities tbody tr {
+    border-bottom: 1px solid #dddddd;
+    font-family: "roboto";
+    font-size: 16px;
+    text-align: center;
+}
+
+.brawlHabilities tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.brawlHabilities tbody tr:last-of-type {
+    border-bottom: 2px solid black;
+}
+
+.brawlHabilities tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.brawlHabilities .brawl-model {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brawlHabilities .brawl-model .img-content {
+    width: 280px;
+    height: 600px;
+}
+
+.brawl-model .img-content img {
+    width: 100%;
+    height: 100%;
+}
+
+.brawlHabilities .Brawler-atacks {
+    width: 100%;
+    font-family: "roboto";
+    margin-bottom: 16px;
+}
+.brawlHabilities .Brawler-atacks .title {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--cinza-escuro);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.brawlHabilities .Brawler-atacks .title h2 {
+    display: inline-block;
+}
+.brawlHabilities .Brawler-atacks .title img {
+    display: inline-block;
+    width: 40px;
+}
+.brawlHabilities .Brawler-atacks .description {
+    border-left: 4px solid black;
+    padding:4px 24px ;
+}
+.container .btn-section {
+    margin: 32px 0 90px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.container .btn-section button {
+    padding: 18px 24px;
+    font-family: "roboto";
+    font-size: 24px;
+    border-radius: 20px;
+    border: #000 solid 2px;
+    font-weight: 800;
+    border: #000 2px solid;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.container .btn-section button:hover {
+    background-color: #03ac13;
+    color: #fff;
+    border-color: transparent;
+}
+.container .btn-section button .icon {
+    display: inline-block;
+    color: inherit;
+}
+footer {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    padding: 24px 0 200px 0;
+    width: 100%;
+    color: #FFF;
+    height: auto; 
+    font-family:"Lilita One" ;
+  }
+  
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .container .media-content h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .media-content .icons {
+    font-size: 32px;
+    gap: 16px;
+    display: flex;
+    transition: transform 0.3s, color .3s;
+    cursor: pointer;
+  }
+  .media-content .icons i:hover {
+    color: var(--vinho);
+    transform: scale(1.3);
+  }
+  
+  footer .footer-social-media {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+  }
+  
+  .footer-social-media .store-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    gap: 30px;
+    
+  }
+  
+  footer .store-img {
+    height: 60px; 
+  }
+  
+  footer .store-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  footer .store-img img:hover {
+    transform: scale(1.05);
+  }
+  footer .footer-links ul {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+  
+  }
+  footer .footer-links ul li {
+    padding: 15px;
+    transition: background-color .3s;
+  }
+  footer .footer-links ul li:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  footer .logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 8px;
+    width: 100%;
+    height: 70px;
+  }
+  
+  footer .logo img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  footer .logo h2 {
+    font-family: "Nougat";
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+    word-spacing: -0.3rem;
+  }
+  footer .footer-copyright {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "roboto";
+    color: #999;
+  }
