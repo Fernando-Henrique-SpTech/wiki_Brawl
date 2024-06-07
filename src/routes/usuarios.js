@@ -11,4 +11,8 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
+router.post("/cadastrarPaginaVista/:idUsuario", function (req, res) {
+    usuarioController.cadastraPaginaVista(req, res);
+});
+
 module.exports = router;

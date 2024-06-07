@@ -10,7 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/progressbar.js/dist/progressbar.min.js"></script>
 </head>
 
-<body>
+<body onload="cadastrarPaginaVista()">
+
     <div class="main">
         <div class="dash-box">
             <div class="menu">
@@ -20,7 +21,7 @@
                 </div>
                 <div class="menu-options">
                     <ul>
-                        <a href="" class="submenu-option">
+                        <a href="index.html" class="submenu-option">
                             <i class="fa-solid fa-gauge"></i>
                             <p>Dashboard</p>
                             <span>></span>
@@ -50,8 +51,8 @@
                             <h2>registros </h2>
                             <div class="info"><i class="fa-solid fa-circle-info"></i></div>
                         </div>
-                        <div class="kpi-value">
-                            <h3>10</h3>
+                        <div class="kpi-value" >
+                            <h3 id="kpi_Registro">0</h3>
                         </div>
                     </div>
 
@@ -73,7 +74,7 @@
                             <div class="info"><i class="fa-solid fa-circle-info"></i></div>
                         </div>
                         <div class="kpi-value">
-                            <h3>10</h3>
+                            <h3 id="kpi_Brawl">0</h3>
                         </div>
                     </div>
                 </div>
@@ -99,4 +100,83 @@
 <script>
     userName.innerHTML = sessionStorage.NOME_USUARIO;
     userEmail.innerHTML = sessionStorage.EMAIL_USUARIO;
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var kpiBrawl;
+    var kpiRegistros;
+
+    function cadastrarPaginaVista() {
+        
+        
+        console.log(idUsuario)
+
+        // Enviando o valor da nova input
+        fetch(`/usuarios/cadastrarPaginaVista/${idUsuario}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+
+                idUsuario: idUsuario,
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+
+                    console.log("criei paginas não vistas")
+                    
+
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+        return false;
+    }
+    setTimeout(() => {
+        pegarDados();
+    }, 250);
+    function pegarDados() {
+        fetch(`/info/info/${idUsuario}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+
+                idUsuario: idUsuario,
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    resposta.json().then(json => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+                        kpiBrawl = json[0].vizualizacao_Usuario;
+                        kpiRegistro = json[0].qntd_Cadastro;
+                        console.log(kpiBrawl, kpiRegistro)
+
+                        kpi_Registro.innerHTML = kpiRegistro;
+                        kpi_Brawl.innerHTML = kpiBrawl;
+
+
+                        console.log("SIM")
+                    });
+                    } else {
+                        throw "Houve um erro ao tentar realizar o cadastro!";
+                    }
+                })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+        return false;
+    }
 </script>
